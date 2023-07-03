@@ -1,0 +1,28 @@
+# Pastas binárias geradas pelo build
+bin/
+obj/
+
+# Arquivos de configuração gerados
+*.dll.config
+*.exe.config
+
+# Arquivos de log
+*.log
+
+# Arquivos temporários
+*.tmp
+*.swp
+
+# Diretório de saída de publicação
+publish/
+
+# Pacotes NuGet
+## Pasta do NuGet
+packages/
+
+# Pasta de ferramentas NuGet
+## Pasta de cache de pacotes
+.nuget/
+
+/appsettings.json
+/appsettings.Development.json
