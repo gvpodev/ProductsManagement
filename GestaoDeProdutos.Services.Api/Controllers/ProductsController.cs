@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProductsManagement.Application.Services.Contracts;
 
 namespace ProductsManagement.Services.Api.Controllers
 {
@@ -6,10 +7,14 @@ namespace ProductsManagement.Services.Api.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Find()
+        private readonly IProductAppService? _productAppService;
+
+        public ProductsController(IProductAppService? productAppService)
         {
-            return Ok();
+            _productAppService = productAppService;
         }
+
+        [HttpGet]
+        public IActionResult FindAll() => StatusCode(200, _productAppService?.FindAll());
     }
 }

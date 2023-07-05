@@ -5,5 +5,5 @@ namespace ProductsManagement.Domain.Contracts.Repositories;
 public interface IBaseRepository<TEntity, TKey> : IDisposable
     where TEntity : class
 {
-    Task<List<TEntity>> FindAllAsync();
+    List<TEntity> FindAll();
 }

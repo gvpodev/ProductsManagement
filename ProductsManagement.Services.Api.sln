@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsManagement.Domain",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsManagement.Infrastructure", "ProductsManagement.Infrastructure\ProductsManagement.Infrastructure.csproj", "{B1C63ED7-8076-4B24-B306-450D476B7F79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsManagement.Application", "ProductsManagement.Application\ProductsManagement.Application.csproj", "{0ECD4106-14CC-449D-9C09-F61EE65304B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductsManagement.Application", "ProductsManagement.Application\ProductsManagement.Application.csproj", "{0ECD4106-14CC-449D-9C09-F61EE65304B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

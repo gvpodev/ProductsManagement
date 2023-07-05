@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProductsManagement.Domain.Contracts.Repositories;
-using ProductsManagement.Domain.Contracts.Services;
+using ProductsManagement.Application.Dtos.Responses;
+using ProductsManagement.Application.Services;
 
 namespace ProductsManagement.Services.Api.Controllers
 {
@@ -8,19 +8,17 @@ namespace ProductsManagement.Services.Api.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private readonly ICategoryService _service;
+        private readonly ICategoryAppService _service;
 
-        public CategoriesController(ICategoryService service)
+        public CategoriesController(ICategoryAppService service)
         {
             _service = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> Find()
+        public IActionResult Find()
         {
-            var categories = await _service.FindAllAsync();
-
-            return Ok(categories);
+            return StatusCode(200, _service.FindAll());
         }
     }
 }

@@ -2,8 +2,8 @@
 
 namespace ProductsManagement.Domain.Contracts.Services
 {
-    public interface ICategoryService
+    public interface IProductDomainService : IDisposable
     {
-        Task<List<Category>> FindAllAsync();
+        List<Product> FindAll();
     }
 }

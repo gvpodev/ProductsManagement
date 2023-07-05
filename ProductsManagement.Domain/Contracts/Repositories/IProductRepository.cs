@@ -1,6 +1,8 @@
-﻿namespace ProductsManagement.Domain.Contracts.Repositories
+﻿using ProductsManagement.Domain.Entities;
+
+namespace ProductsManagement.Domain.Contracts.Repositories
 {
-    public interface IProductRepository
+    public interface IProductRepository : IBaseRepository<Product, Guid>
     {
     }
 }
